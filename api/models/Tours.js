@@ -10,17 +10,20 @@ module.exports = {
   attributes: {
     english: {
       autoMigrations: {
+        // allowNull: true,
         index: true
       },
       model: 'ToursEn',
     },
     romanian: {
+      // allowNull: true,
       autoMigrations: {
         index: true
       },
       model: 'ToursRo',
     },
     ukrainian: {
+      // allowNull: true,
       autoMigrations: {
         index: true
       },
