@@ -20,14 +20,17 @@ module.exports.routes = {
    ***************************************************************************/
 
   '/': {
-    view: 'pages/homepage'
+    view: 'assets/index.html'
   },
-  'POST /login': 'AuthController.login',
-  'GET /logout': 'AuthController.logout',
-  'POST /registration': 'RegistrationController.registration',
-  'GET /tours': 'ToursController.allTours',
-  'POST /create-tour': 'ToursController.createTour',
-  'GET /validityJwt': 'AuthController.validityJwt'
+  'POST /api/login': 'AuthController.login',
+  'GET /api/logout': 'AuthController.logout',
+  'POST /api/registration': 'RegistrationController.registration',
+  'GET /api/tours': 'ToursController.allTours',
+  'POST /api/create-tour': 'ToursController.createTour',
+  'GET /api/validityJwt': 'AuthController.validityJwt',
+  '/*': {
+    view: 'assets/index.html'
+  },
 
 
   /***************************************************************************
