@@ -35,7 +35,8 @@ module.exports = {
                if (err) {
                   res.status(400).send(err);
                }
-
+               console.log(user);
+               
                const data = {
                   id: user.id,
                   name: user.name,

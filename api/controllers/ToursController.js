@@ -16,7 +16,76 @@ module.exports = {
             });
          }
          res.send(tours);
-      })
+      });
+   },
+
+   addToHotTour: (req, res) => {
+      Tours.updateOne({id: req.params.tourId}).set({isSelected: true}).exec((err, tours) => {
+         if (err) {
+            res.send(500, {
+               err: err
+            });
+         }
+         res.send('Tour successfully added to hot tours');
+      });
+   },
+
+   deleteFromHotTour: (req, res) => {
+      Tours.updateOne({id: req.params.tourId}).set({isSelected: false}).exec((err, tours) => {
+         if (err) {
+            res.send(500, {
+               err: err
+            });
+         }
+         res.send('Tour successfully removing from hot tours');
+      });
+   },
+
+   hotTours: (req, res) => {
+      Tours.find({isSelected: true}).populate('english').populate('romanian').populate('ukrainian').exec((err, tours) => {
+         if (err) {
+            res.send(500, {
+               err: err
+            });
+         }
+         res.send(tours);
+      });
+   },
+
+   deleteTour: (req, res) => {
+      Tours.destroyOne({id: req.params.tourId}).exec((err, tours) => {
+         if (err) {
+            res.send(500, {
+               err: err
+            });
+         }
+
+         ToursEn.destroyOne({id: req.params.tourId}).exec((err, tours) => {
+            if (err) {
+               res.send(500, {
+                  err: err
+               });
+            }
+
+            ToursRo.destroyOne({id: req.params.tourId}).exec((err, tours) => {
+               if (err) {
+                  res.send(500, {
+                     err: err
+                  });
+               }
+   
+               ToursUa.destroyOne({id: req.params.tourId}).exec((err, tours) => {
+                  if (err) {
+                     res.send(500, {
+                        err: err
+                     });
+                  }
+      
+                  res.send('Tour successfully deleted');
+               })
+            })
+         })
+      });
    },
 
    createTour: (req, res) => {
@@ -29,7 +98,8 @@ module.exports = {
          Tours.create({
             english: 1,
             romanian: 1,
-            ukrainian: 1
+            ukrainian: 1,
+            isSelected: 0
          }).fetch().exec((err, tour) => {
             if (err) {
                return res.status(400).send(err);

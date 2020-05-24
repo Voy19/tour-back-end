@@ -5,4 +5,11 @@
  * @help        :: See https://sailsjs.com/docs/concepts/actions
  */
 
-module.exports = {};
+module.exports = {
+   roleId: {
+      autoMigrations: {
+         index: true
+      },
+      model: 'Roles',
+   },
+};

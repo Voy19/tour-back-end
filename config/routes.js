@@ -26,6 +26,10 @@ module.exports.routes = {
   'GET /api/logout': 'AuthController.logout',
   'POST /api/registration': 'RegistrationController.registration',
   'GET /api/tours': 'ToursController.allTours',
+  'GET /api/hot-tours': 'ToursController.hotTours',
+  'DELETE /api/delete-tour/:tourId': 'ToursController.deleteTour',
+  'PUT /api/add-to-hot-tour/:tourId': 'ToursController.addToHotTour',
+  'PUT /api/delete-from-hot-tour/:tourId ': 'ToursController.deleteFromHotTour',
   'POST /api/create-tour': 'ToursController.createTour',
   'GET /api/validityJwt': 'AuthController.validityJwt',
   '/*': {

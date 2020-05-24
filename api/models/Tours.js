@@ -28,6 +28,11 @@ module.exports = {
         index: true
       },
       model: 'ToursUa',
+    },
+    isSelected: {
+      allowNull: false,
+      type: 'boolean',
+      defaultsTo: false
     }
   },
   datastore: 'mysql_connection',
