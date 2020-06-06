@@ -13,10 +13,9 @@ module.exports = {
       // passport.authenticate("jwt", (err, user, info) => {
       //    if (err) return res.status(400).send(err);
       //    if (info !== undefined) return res.status(400).send({ token: info.message });
-      // console.log(req.body.tourId);      
 
          req.file('file').upload({
-               dirname: require('path').resolve(sails.config.appPath, 'assets/images'),
+               dirname: require('path').resolve(sails.config.appPath, '.tmp/public/images'),
                saveAs: (__newFileStream, cb) => {
                   cb(null, `tour_${req.body.tourId}` + path.extname(__newFileStream.filename).toLowerCase());
                },
