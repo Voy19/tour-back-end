@@ -26,6 +26,7 @@ module.exports.routes = {
   'GET /api/logout': 'AuthController.logout',
   'POST /api/registration': 'RegistrationController.registration',
   'GET /api/tours': 'ToursController.allTours',
+  "POST /api/upload": "ImagesController.upload",
   'GET /api/hot-tours': 'ToursController.hotTours',
   'DELETE /api/delete-tour/:tourId': 'ToursController.deleteTour',
   'PUT /api/add-to-hot-tour/:tourId': 'ToursController.addToHotTour',

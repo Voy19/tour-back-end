@@ -9,7 +9,7 @@ const passport = require('passport');
 
 module.exports = {
    allTours: (req, res) => {
-      Tours.find().populate('english').populate('romanian').populate('ukrainian').exec((err, tours) => {
+      Tours.find().populate('english').populate('romanian').populate('ukrainian').populate('imageId').exec((err, tours) => {
          if (err) {
             res.send(500, {
                err: err
@@ -99,7 +99,8 @@ module.exports = {
             english: 1,
             romanian: 1,
             ukrainian: 1,
-            isSelected: 0
+            isSelected: 0,
+            imageId: 1,
          }).fetch().exec((err, tour) => {
             if (err) {
                return res.status(400).send(err);
@@ -110,7 +111,8 @@ module.exports = {
             }, {
                english: tour.id,
                romanian: tour.id,
-               ukrainian: tour.id
+               ukrainian: tour.id,
+               imageId: tour.id
             }).exec((err) => {
                if (err) {
                   return res.status(400).send(err);
@@ -163,8 +165,7 @@ module.exports = {
                         if (err) {
                            return res.status(400).send(err);
                         }
-
-                        res.send('Tour successfully created');
+                         res.send(`${tour.id}`);
                      })
                   })
                })

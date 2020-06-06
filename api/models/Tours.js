@@ -29,6 +29,12 @@ module.exports = {
       },
       model: 'ToursUa',
     },
+    imageId: {
+      autoMigrations: {
+        index: true
+      },
+      model: 'Images',
+    },
     isSelected: {
       allowNull: false,
       type: 'boolean',
