@@ -94,6 +94,7 @@ module.exports = {
       //    if (info !== undefined) return res.status(400).send({
       //       token: info.message
       //    });
+      // return res.send('test');
 
          Tours.create({
             english: 1,

@@ -6,7 +6,15 @@
  */
 
 const passport = require("passport");
-const path = require("path");
+const cloudinary = require('cloudinary').v2;
+const path = require('path');
+const config = require(path.resolve(sails.config.appPath, './config.json')).cloudinarySettings;   
+
+cloudinary.config({ 
+   cloud_name: config.cloud_name, 
+   api_key: config.api_key, 
+   api_secret: config.api_secret 
+});
 
 module.exports = {
    upload: function (req, res) {
@@ -15,50 +23,37 @@ module.exports = {
       //    if (info !== undefined) return res.status(400).send({ token: info.message });
 
          req.file('file').upload({
-               dirname: require('path').resolve(sails.config.appPath, '.tmp/public/images'),
-               saveAs: (__newFileStream, cb) => {
-                  cb(null, `tour_${req.body.tourId}` + path.extname(__newFileStream.filename).toLowerCase());
-               },
-               maxBytes: 10000000
-         }, (err, uploadedFile) => {
-               if (err) {
-                  return res.serverError(err);
-               }
-
-               if (uploadedFile.length === 0) {
-                  return res.serverError("No files were uploaded!");
-               }
-               
-               let fileUID = uploadedFile[0].fd.replace(/^.*[\\\/]/, '');
-
-               Images.findOrCreate({
-                  tourId: req.body.tourId,
-               }, {
-                  image_uid: fileUID,
-                  tourId: req.body.tourId
-               }).exec((err, image, wasCreated) => {
-                  if (err) return res.send(err);
-                  if (!wasCreated) {
-                     Images.update({
-                           tourId: req.body.tourId
-                     }, {
-                           image_uid: fileUID
-                     }).exec((err) => {
-                           if (err) {
-                              return res.status(400).send(err);
-                           }
-                           res.send({
-                              file: uploadedFile[0]
-                           });
-                     })
-                  } else {
-                     res.send({
-                           file: uploadedFile[0]
-                     });
+                  dirname: require('path').resolve(sails.config.appPath, '.tmp/public/images'),
+                  maxBytes: 10000000
+            }, (err, uploadedFile) => {
+                  if (err) {
+                     return res.serverError(err);
                   }
-               })
-         });
-      // })(req, res)
+
+                  const img = require('path').resolve(sails.config.appPath, `.tmp/public/images/${uploadedFile[0].fd.replace(/^.*[\\\/]/, '')}`);
+
+                  cloudinary.uploader.upload(img, {
+                     public_id: '', 
+                     use_filename: true, 
+                     discard_original_filename: true, 
+                     folder: 'tour_images'
+                  }).then((result) => {
+                     Images.create({
+                        tourId: req.body.tourId,
+                        image_uid: result.url,
+                     }).exec((err, image) => {
+                           res.status(200).send({
+                              message: "success",
+                              result,
+                           });
+                        });
+                     }).catch((error) => {
+                        res.status(500).send({
+                           message: "failure",
+                           error,
+                        });
+                  });
+         })
    },
 
    getUserAvatar: (req, res) => {
