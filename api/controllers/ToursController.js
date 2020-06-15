@@ -42,7 +42,7 @@ module.exports = {
    },
 
    hotTours: (req, res) => {
-      Tours.find({isSelected: true}).populate('english').populate('romanian').populate('ukrainian').exec((err, tours) => {
+      Tours.find({isSelected: true}).populate('english').populate('romanian').populate('ukrainian').populate('imageId').exec((err, tours) => {
          if (err) {
             res.send(500, {
                err: err
