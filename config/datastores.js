@@ -56,9 +56,9 @@ module.exports.datastores = {
   mysql_connection: {
     adapter: require('sails-mysql'),
     host: 'remotemysql.com', // can user localhost or mysql connection either
-    user: 'B0cYiatryv', // your mysql username
-    password: '62q2Bfmknk', // your mysql password
-    database: 'B0cYiatryv', // database name
+    user: 'WQZJJZ6IXe', // your mysql username
+    password: 'IoCunQwbEO', // your mysql password
+    database: 'WQZJJZ6IXe', // database name
   },
 
 };
