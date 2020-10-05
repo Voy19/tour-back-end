@@ -41,8 +41,6 @@ module.exports = {
     },
     nights: {
       type: 'number',
-      min: 1,
-      max: 31,
       required: true,
       allowNull: false
     },
