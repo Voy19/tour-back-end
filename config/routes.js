@@ -32,6 +32,9 @@ module.exports.routes = {
   'PUT /api/add-to-hot-tour/:tourId': 'ToursController.addToHotTour',
   'PUT /api/delete-from-hot-tour/:tourId ': 'ToursController.deleteFromHotTour',
   'POST /api/create-tour': 'ToursController.createTour',
+  'POST /api/create-feedback': 'FeedbackController.createFeedback',
+  'DELETE /api/delete-feedback/:feedbackId': 'FeedbackController.deleteFeedback',
+  'GET /api/feedbacks': 'FeedbackController.getFeedbacks',
   'GET /api/validityJwt': 'AuthController.validityJwt',
   '/*': {
     view: 'assets/index.html'
