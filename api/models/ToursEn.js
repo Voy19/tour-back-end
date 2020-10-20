@@ -40,7 +40,7 @@ module.exports = {
       allowNull: false
     },
     nights: {
-      type: 'number',
+      type: 'string',
       required: true,
       allowNull: false
     },
