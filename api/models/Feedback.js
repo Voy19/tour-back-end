@@ -18,7 +18,7 @@ module.exports = {
       type: 'string',
       required: true,
       allowNull: false,
-      regex: /^([a-zA-z])(?!\S*?[\(\)\{\}\/\\\[\],. а-яА-Я]).{2,}$/
+      // regex: /^([a-zA-z])(?!\S*?[\(\)\{\}\/\\\[\],. а-яА-Я]).{2,}$/
     },
     description: {
       type: 'string',
