@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.a6edb6ff.chunk.css",
-    "main.js": "/static/js/main.887f08c0.chunk.js",
-    "main.js.map": "/static/js/main.887f08c0.chunk.js.map",
+    "main.css": "/static/css/main.7f80248a.chunk.css",
+    "main.js": "/static/js/main.098f9596.chunk.js",
+    "main.js.map": "/static/js/main.098f9596.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.aaf88d20.js",
     "runtime-main.js.map": "/static/js/runtime-main.aaf88d20.js.map",
     "static/css/2.68dd0589.chunk.css": "/static/css/2.68dd0589.chunk.css",
-    "static/js/2.fd733d18.chunk.js": "/static/js/2.fd733d18.chunk.js",
-    "static/js/2.fd733d18.chunk.js.map": "/static/js/2.fd733d18.chunk.js.map",
+    "static/js/2.36cd5df1.chunk.js": "/static/js/2.36cd5df1.chunk.js",
+    "static/js/2.36cd5df1.chunk.js.map": "/static/js/2.36cd5df1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d5b8a14fd65eca7a5f538ae9bb212952.js": "/precache-manifest.d5b8a14fd65eca7a5f538ae9bb212952.js",
+    "precache-manifest.2fbc29629394d3c14369d1e558e2f751.js": "/precache-manifest.2fbc29629394d3c14369d1e558e2f751.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.68dd0589.chunk.css.map": "/static/css/2.68dd0589.chunk.css.map",
-    "static/css/main.a6edb6ff.chunk.css.map": "/static/css/main.a6edb6ff.chunk.css.map",
-    "static/js/2.fd733d18.chunk.js.LICENSE.txt": "/static/js/2.fd733d18.chunk.js.LICENSE.txt",
+    "static/css/main.7f80248a.chunk.css.map": "/static/css/main.7f80248a.chunk.css.map",
+    "static/js/2.36cd5df1.chunk.js.LICENSE.txt": "/static/js/2.36cd5df1.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/static/media/1.34efef1b.jpg",
     "static/media/2.jpg": "/static/media/2.ff143395.jpg",
     "static/media/3.jpg": "/static/media/3.c5309a9a.jpg",
@@ -27,14 +27,15 @@
     "static/media/styles.module.css": "/static/media/main.cfb8dc9e.jpg",
     "static/media/bitrise.svg": "/static/media/bitrise.758f308f.svg",
     "static/media/brandfolder.svg": "/static/media/brandfolder.1d75855d.svg",
+    "static/media/buko.svg": "/static/media/buko.15ed6915.svg",
     "static/media/business.jpeg": "/static/media/business.e02cb9d1.jpeg",
     "static/media/chromatic.svg": "/static/media/chromatic.62b45b75.svg",
     "static/media/doc.png": "/static/media/doc.b80b5bc6.png",
+    "static/media/dolyna.svg": "/static/media/dolyna.2ebebce2.svg",
     "static/media/logo-coral-travel.svg": "/static/media/logo-coral-travel.8e686bf7.svg",
     "static/media/map.png": "/static/media/map.143242ae.png",
-    "static/media/semantic-web.svg": "/static/media/semantic-web.8b3fe8bf.svg",
-    "static/media/similio-seeklogo.com.svg": "/static/media/similio-seeklogo.com.c53545c2.svg",
-    "static/media/svelte.svg": "/static/media/svelte.4ebda294.svg",
+    "static/media/mygovo.svg": "/static/media/mygovo.da0a343a.svg",
+    "static/media/user.svg": "/static/media/user.b42397fe.svg",
     "static/media/Закон_України_Про_туризм.doc": "/static/media/Закон_України_Про_туризм.9318ac24.doc",
     "static/media/Закон_України_про_захист_прав_споживачів.doc": "/static/media/Закон_України_про_захист_прав_споживачів.94ed6477.doc",
     "static/media/Про_затвердження_Ліцензійних_умов провадження_туроператорської_діяльності.doc": "/static/media/Про_затвердження_Ліцензійних_умов провадження_туроператорської_діяльності.b3793d51.doc"
@@ -42,8 +43,8 @@
   "entrypoints": [
     "static/js/runtime-main.aaf88d20.js",
     "static/css/2.68dd0589.chunk.css",
-    "static/js/2.fd733d18.chunk.js",
-    "static/css/main.a6edb6ff.chunk.css",
-    "static/js/main.887f08c0.chunk.js"
+    "static/js/2.36cd5df1.chunk.js",
+    "static/css/main.7f80248a.chunk.css",
+    "static/js/main.098f9596.chunk.js"
   ]
 }
