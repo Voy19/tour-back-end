@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "518363eb316ed83bab9ef4f95833830e",
+    "revision": "0e00fce8970216885d02f131136d895f",
     "url": "/index.html"
   },
   {
-    "revision": "175d9794205e07f47a06",
+    "revision": "3566924313b7ab4bc2a5",
     "url": "/static/css/2.68dd0589.chunk.css"
   },
   {
-    "revision": "441f0eb44c4beb4dc15f",
-    "url": "/static/css/main.7f80248a.chunk.css"
+    "revision": "570db9f5b28bc64c3af6",
+    "url": "/static/css/main.fe07e994.chunk.css"
   },
   {
-    "revision": "175d9794205e07f47a06",
-    "url": "/static/js/2.36cd5df1.chunk.js"
+    "revision": "3566924313b7ab4bc2a5",
+    "url": "/static/js/2.2ec69ae4.chunk.js"
   },
   {
     "revision": "57a27ee304db809c6acf03b1e52d7d9f",
-    "url": "/static/js/2.36cd5df1.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.2ec69ae4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "441f0eb44c4beb4dc15f",
-    "url": "/static/js/main.098f9596.chunk.js"
+    "revision": "570db9f5b28bc64c3af6",
+    "url": "/static/js/main.bbd68111.chunk.js"
   },
   {
     "revision": "b777e1e5607df564d26b",
@@ -68,8 +68,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/behance.e6283662.svg"
   },
   {
-    "revision": "c6ce7b0413ad0e47fda1938ed9ec99a4",
-    "url": "/static/media/bg1.c6ce7b04.jpg"
+    "revision": "8048be6f148f3c1fa074acfb9bc0cc15",
+    "url": "/static/media/bg4.8048be6f.jpg"
+  },
+  {
+    "revision": "2f745d3eddbf3acbba6b5058985c7948",
+    "url": "/static/media/bg6.2f745d3e.jpg"
   },
   {
     "revision": "758f308fef375b6b3132bbf9be5b6946",
@@ -104,12 +108,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo-coral-travel.8e686bf7.svg"
   },
   {
-    "revision": "cfb8dc9e24c359fd1239470a90086866",
-    "url": "/static/media/main.cfb8dc9e.jpg"
-  },
-  {
-    "revision": "143242ae365e15aecef51ba6a9be803f",
-    "url": "/static/media/map.143242ae.png"
+    "revision": "73d1800681ce1fc4bd60f814b9e1021d",
+    "url": "/static/media/map2.73d18006.png"
   },
   {
     "revision": "da0a343a0c602fd2848a3a8b40c18ed4",
