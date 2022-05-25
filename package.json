@@ -12,7 +12,7 @@
     "cloudinary": "^1.22.0",
     "date-fns": "^2.7.0",
     "googleapis": "^52.1.0",
-    "grunt": "1.0.4",
+    "grunt": "1.5.3",
     "jsonwebtoken": "^8.5.1",
     "nested-pop": "^0.1.4",
     "passport": "^0.4.0",
